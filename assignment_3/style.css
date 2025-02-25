@@ -12,8 +12,7 @@
    doesn't override these styles)
 */
 body {
-    /* TODO: Choose a color or font family from Chapter 5 examples,
-             explain in a comment why you picked it. */
+    /* TODO: I picked this color as a neutral base, to ensure readability. */
     color: #333;
     font-family: Arial, sans-serif;
     /* e.g. background-color: #f5f5f5; (optional) */
@@ -49,9 +48,16 @@ body {
   }
   
   /*
-    For demonstration:
-    - Show which rules get overridden by your internal <style> block
-    - Which might get overridden by inline styles
-    - Comment your observations about the cascade and inheritance
+  Rules overridden by intenal <style> block:
+  - the external CSS file originally set the <h1> color to green, but the internal <style> block changed it to yellow
+  - the external CSS file set the <footer> font-style to italic, but the internal <style> block changed it to normal
+  - external CSS did not define a background color, but the internal <style> block set it to beige
+
+  Rules overridden by Inline Styles::
+  - the inline <<h1 style="color:#641b1b; font-family:'Courier New';"> directly changes the color to dark red and the font to Courier New, overriding both the internal and external CSS rules
+
+  Observations on Cascade & Inheritance:
+  - the cascade follows a hierarchy: external CSS-> internal CSS-> inline CSS(highest priority)
+  -inheritance allows child elements like <p> to receive styles from parent elements like <body> unless overridden by a more specific rule
   */
   
