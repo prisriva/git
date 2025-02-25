@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 3 - Chapter 5 Demo</title>
+
+  <!--
+    TODO #1 (External CSS):
+      Link to your external 'style.css' file here.
+      For reference, see Chapter 5 about including CSS files.
+  -->
+  <link rel="stylesheet" href="style.css"> <!-- external 'style.css' file that's used for most styling elements, unless overridden-->
+  <style>
+    h1 {
+      color: yellow; /* internal styling that overrides the external css file */
+    }
+  </style> <!-- Internal CSS -->
+</head>
+
+  <!--
+    TODO #2 (Internal CSS):
+    In this example, the <body> background color is set to beige, and the <footer> text color is set to a dark red. 
+  -->
+  <style>
+    body {
+      background-color: #f5f5d3; /* background should be beige */
+    }
+    footer {
+      color: rgb(115, 26, 26)/* This rule applies unless overridden */
+    }
+</style>
+</head>
+<body>
+  <!--
+    TODO #3 (Inline CSS):
+      Add a style attribute to at least one element, e.g. this <h1>.
+      Example:
+        <h1 style="color: blue; font-family: serif;">My Demo</h1>
+      Then explain in a comment which Chapter 5 property/properties are used
+      and how they might override the external or internal CSS if conflicts arise.
+  -->
+  <h1 style="color:#641b1b; font-family:'Courier New';">Welcome to My Chapter 5 Demo</h1> <!--This is inline CSS, which means CSS formatting goes inside the code, and will ONLY affect the line/text/content within the same tag. Inline tags get priority over both external css tags, and CSS <style> tags in the head.  -->
+
+<h1>Test phrase that should be yellow</h1>
+
+  <p>
+    This paragraph should demonstrate <strong class="highlight">inheritance</strong>.
+    If you set a 'color' or 'font-family' on the <body> or a parent element,
+    it should automatically apply here, unless it's overridden.
+  </p>
+  <p style="color: rgba(22, 80, 40, 0.797); font-size: 30px; font-family: 'Comic Sans MS', cursive;">
+    Modify colors, fonts, text size, etc. in your external or internal CSS.
+    Observe how the CSS cascade and inheritance affect these paragraphs
+    vs. any inline-styled elements.
+  </p>
+<!-- changed the font size, color and font for the text above, using inline-styled elements. The inline-styling overrid the CSS file. -->
+  
+
+<!--
+    TODO #4 (Demonstrate Cascade):
+      The external CSS file sets the <h1> color to green. However the internal CSS inside the <style> block sets the color to dark red. This alone would make the all of the text within an <h1> tag dark red. However, the inline CSS for the <h1> tag sets the color to a dark red. This inline CSS will override the internal CSS, and the internal CSS will override the external CSS.
+  -->
+
+  <footer>
+    <p>&copy; 2025 My Demo Site</p>
+  </footer>
+
+</body>
+</html>
