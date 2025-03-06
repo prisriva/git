@@ -1,0 +1,12 @@
+.container{
+    display: grod;
+    grid-template-columns: repeat(3,1fr);/* 3 columns */
+    gap: 10px; /*space between items */
+    padding: 10px;
+}
+.box{
+    background-color: #7c1f1fe6;
+    padding: 20px;
+    text-align: center;
+
+} 
