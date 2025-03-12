@@ -6,7 +6,7 @@ body {
     box-sizing: border-box;
 }
 
-/* flexbox navigation */
+/* Flexbox for Navigation */
 header {
     background-color: #add8e6;
     padding: 10px;
@@ -24,28 +24,42 @@ nav a {
     font-weight: bold;
 }
 
-/*main grid */
+/* CSS Grid */
 .container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr; /* Main content + Sidebar */
     gap: 10px;
     padding: 10px;
 }
 
+/* Box Styling */
+.box {
+    border: 2px solid black;
+    padding: 15px; 
+    text-align: center;
+    background-color: #f9f9f9;
+    font-size: 12px;
+    line-height: 1.4;
+    overflow: hidden; 
+}
+
+/* Main Content Background */
 .main-content {
     background-color: #ffff99;
-    padding: 20px;
 }
 
+/* Sidebar Background */
 .sidebar {
     background-color: #ffcccb;
-    padding: 20px;
 }
 
+/* Footer Styling */
 footer {
     background-color: #90ee90;
     text-align: center;
     padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 /* rwd */
@@ -56,10 +70,12 @@ footer {
     }
 
     .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* stack boxes vertically on mobile */
     }
 
-    .main-content, .sidebar {
-        width: 100%;
+    .box {
+        width: 100%; /* full width on mobile */
+        font-size: 14px; 
+        padding: 10px;
     }
 }
