@@ -9,11 +9,21 @@ body {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+    text-align: center;
+    background-color: white;
+    color: black;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Dark mode styles (applied via JavaScript) */
+.dark-mode {
+    background-color: rgb(9, 3, 43);
+    color: white;
 }
 
 /* Flexbox for navigation */
 header {
-    background-color: #add8e6;
+    background-color: #7ca680;
     padding: 1rem;
     width: 100%;
 }
@@ -44,30 +54,46 @@ nav a {
 
 /* Main content */
 .main-content {
-    background-color: #ffff99;
-    padding: 2rem;
+    background-color: #c997ba;
     font-size: 1.2rem;
     line-height: 1.6;
+    padding: 2rem;
 }
 
 /* Sidebar */
 .sidebar {
-    background-color: #ffcccb;
-    padding: 2rem;
+    background-color: #3a5288;
     font-size: 1.1rem;
     line-height: 1.5;
+    padding: 2rem;
 }
 
 /* Footer styling */
 footer {
-    background-color: #90ee90;
+    background-color: #725252;
     text-align: center;
     padding: 1rem;
     font-size: 1rem;
     width: 100%;
 }
 
-/* RWD */
+/* Button styling */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #577d6c;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #9c6f68;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
