@@ -1,25 +1,22 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #ffffff;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
-header {
-    background: #333;
-    color: white;
-    padding: 1em;
-    text-align: center;
-}
-
+/* Navigation */
 nav ul {
-    list-style: none;
-    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    list-style: none;
 }
 
 nav ul li a {
@@ -27,10 +24,34 @@ nav ul li a {
     text-decoration: none;
 }
 
-main {
+/* Page Headers */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+}
+
+/* Car Gallery */
+.car-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     padding: 20px;
 }
 
+.car {
+    background: #333;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.car img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
 @media (max-width: 1024px) {
     body {
         font-size: 18px;
@@ -40,11 +61,15 @@ main {
 @media (max-width: 768px) {
     body {
         font-size: 16px;
+        padding: 10px;
     }
 }
 
 @media (max-width: 480px) {
     body {
         font-size: 14px;
+    }
+    .car-gallery {
+        grid-template-columns: 1fr;
     }
 }
