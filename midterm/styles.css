@@ -1,18 +1,26 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1c1c1c;
-    color: #ffffff;
+    font-family: 'Roboto Slab', serif; 
+    background-color: #000000; 
+    color: #ffffff; 
     margin: 0;
     padding: 0;
 }
 
 /* Navigation */
+nav {
+    border: 1px solid #3b3d5c; /
+    border-radius: 8px; /* rounded corners */
+    margin: 10px 20px; /* Spacing from edges */
+    background-color: #1a1b33; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+}
+
 nav ul {
     display: flex;
     justify-content: space-around;
-    background-color: #333;
     padding: 10px;
+    margin: 0; 
 }
 
 nav ul li {
@@ -20,56 +28,68 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #7e7fa0; 
     text-decoration: none;
+    font-weight: bold;
 }
 
-/* Page Headers */
+nav ul li a:hover {
+    background-color: #3b3d5c; 
+    border-radius: 5px; 
+    padding: 5px; 
+}
+
+/* Page Header */
 header {
     text-align: center;
     padding: 20px;
-    background-color: #222;
+    background-color: #1a1b33; /* match navbar background color */
 }
 
-/* Car Gallery */
+/* Car Gallery Section */
 .car-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px; 
     padding: 20px;
 }
 
+/* Individual Car Boxes */
 .car {
-    background: #333;
+    background-color: #1a1b33; /* Dark blue background for car boxes */
+    color: #ffffff; /* White text for readability */
+    border-radius: 8px; /* Rounded corners for a modern look */
     padding: 15px;
-    border-radius: 8px;
-    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); 
 }
 
-.car img {
-    width: 100%;
-    border-radius: 5px;
+.car h2 {
+    font-size: 20px;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    body {
-        font-size: 18px;
-    }
+.car p {
+    font-size: 16px;
+    line-height: 1.6;
 }
+
+/*scrollable images inside car boxes */
+.car-images-scroll {
+    display: flex; /* align images horizontally */
+    overflow-x: auto; 
+    gap: 10px; /* space between images */
+}
+
+.car-images-scroll img {
+    height: 150px; 
+    border-radius: 5px; 
+}
+
+
 
 @media (max-width: 768px) {
-    body {
-        font-size: 16px;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
     .car-gallery {
-        grid-template-columns: 1fr;
-    }
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+        gap: 15px;
+        padding-left :10 px
+ }
 }
